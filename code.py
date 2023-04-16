@@ -70,3 +70,30 @@ class two_d(shape):
         super().get_name()  
         print('and its a 2d shape')
     
+class parallelogram(two_d):
+    def __init__(self,smaller_side,bigger_side,hight_on_bigger_side,hight_on_smaller_side,**kwargs):
+        super().__init__()
+        self.smaller_side=smaller_side
+        self.bigger_side=bigger_side
+        self.hight_on_bigger_side=hight_on_bigger_side
+        self.hight_on_smaller_side=hight_on_smaller_side
+    
+    def Volume(self,**kwargs):
+        super().Volume()
+    
+    def Perimeter(self,**kwargs):
+        return ((self.bigger_side)+(self.smaller_side))*2
+    
+    def Area(self,**kwargs):
+        print('yor area is smaller_side * hight_on_smaller_side or bigger_side * hight_on_bigger_side')
+        return (self.smaller_side) * (self.hight_on_smaller_side)
+    
+    def name(self):
+        super().get_name()  
+        print('and its kind of parallelogram')
+    
+    def detail(self,**kwargs):
+        print(f'you have two side with size of {self.smaller_side} and two side with size of {self.bigger_side} ')
+     
+    def attribute(self,**kwargs):
+        print('your diameter cut each other in half and the same opposite angles and up with down side and right with left side are parallel')

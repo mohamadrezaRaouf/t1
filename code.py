@@ -370,3 +370,26 @@ class pyramid(three_d):
         super().get_name()
         print('and its kind of pyramid')
         
+
+class cylinder(three_d):
+    def __init__(self,radius,hight):
+        super().__init__()
+        self.radius=radius
+        self.hight=hight
+        self.__pi=3.14
+    
+    def Volume(self):
+        return self.__pi * (self.radius**2) * self.hight
+   
+    def side_area(self):
+        return 2* self.__pi * self.radius *self.hight
+
+    def total_area(self):
+        return self.side_area() + 2*( self.__pi + self.radius **2)
+
+    def Perimeter(self):
+        super().Perimeter()    
+
+    def name(self):
+        super().get_name()
+        print('and its kind of cylinder')

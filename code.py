@@ -170,4 +170,30 @@ class triangle(two_d):
     def name(self):
         super().get_name()  
         print('and its kind of triangle')
+
+
+class pentagon(two_d):
+    def __init__(self,side1,side2,side3,side4,side5,**kwargs):
+        super().__init__()
+        self.side1=side1
+        self.side2=side2
+        self.side3=side3
+        self.side4=side4
+        self.side5=side5
         
+    def Volume(self,**kwargs):
+        super().Volume()
+    
+    def Perimeter(self,**kwargs):
+        return self.side1 + self.side2 + self.side3 + self.side4 + self.side5
+    
+    def kind(self):
+        if self.side1==self.side2==self.side3==self.side4==self.side5:
+            print('its a regular pentagon')
+            print('all of the angles are the same')
+        else:
+            print('its an ordinary pentagon')
+
+    def name(self):
+        super().get_name()  
+        print('and its kind of pentagon')

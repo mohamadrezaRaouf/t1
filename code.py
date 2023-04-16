@@ -51,4 +51,22 @@ class three_d(shape):
         
     def Perimeter(self,**kwargs):
         print('its 3d shape and dosent have perimeter')
+
+class two_d(shape):
+    def __init__(self,diameter=None,angle_between_diameter=None,**kwargs):
+        super().__init__()
+        self._diameter=diameter
+        self.__angle_between_diameter=angle_between_diameter
+    def Volume(self, **kwargs):
+        print('your volume is 0,its 2d shape')
+        
+    def Perimeter(self,**kwargs):
+        pass 
+    
+    def Area(self, **kwargs):
+        pass
+    
+    def get_name(self):
+        super().get_name()  
+        print('and its a 2d shape')
     

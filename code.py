@@ -197,3 +197,26 @@ class pentagon(two_d):
     def name(self):
         super().get_name()  
         print('and its kind of pentagon')
+
+
+class circle(two_d):
+    def __init__(self,radius,**kwargs):
+        super().__init__()
+        self.radius=radius
+        self.__pi=3.14
+    
+    def Volume(self,**kwargs):
+        super().Volume()
+    
+    def Perimeter(self):
+        return 2*self.__pi*self.radius
+    
+    def diameter(self):
+        return self.radius*2
+    
+    def Area(self):
+        return (self.radius **2) *self.__pi
+
+    def name(self):
+        super().get_name()  
+        print('and its kind of circle')

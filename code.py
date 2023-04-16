@@ -294,3 +294,26 @@ class square():
         return self.side1 * 2**0.5
     
     
+
+class spherical(three_d):
+    def __init(self, radius):
+        super().__init__()
+        self.radius=radius
+        self.__pi=3.14
+    
+    def Volume(self):
+        return  4*self.__pi *(self.radius**3) /3
+    
+    def Area(self):
+        return 4* self.__pi *(self.radius **2)
+    
+    def Perimeter(self):
+        super().Perimeter()
+        
+    def detail(self):
+        print('in this shape the total and the side area are the same')
+     
+    def name(self):
+        super().get_name()
+        print('and its kind of spherical')
+        

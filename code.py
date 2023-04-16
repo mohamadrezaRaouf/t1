@@ -317,3 +317,29 @@ class spherical(three_d):
         super().get_name()
         print('and its kind of spherical')
         
+
+
+        
+class cone(three_d):
+    def __init__(self,radius,hight):
+        super().__init__()
+        self.radius=radius
+        self.hight=hight
+        self.__pi=3.14
+        
+    def Volume(self):
+        return self.__pi * (self.radius**2) * self.hight /3
+    
+    def side_area(self):
+        return self.__pi * self.radius *((self.hight **2 + self.radius **2)**0.5)
+
+    def total_area(self):
+        return self.side_area() + self.__pi + self.radius **2
+
+    def Perimeter(self):
+        super().Perimeter()    
+
+    def name(self):
+        super().get_name()
+        print('and its kind of cone')    
+        

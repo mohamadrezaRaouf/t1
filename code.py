@@ -243,3 +243,27 @@ class diamond():
     def attribute (self,**kwargs):
         return self.obj.detail()
         print('you have 2 diameter that make 90 degree angle when they cut each other')
+
+
+class rectangle():
+    def __init__(self,side1,side2,diameter,d_angle,obj,**kwargs):
+        self.side1=side1
+        self.side2=side2 
+        self.diameter=diameter
+        self.d_angle=d_angle
+        self.obj=obj
+        
+    #aggrigation az class motevazi al azla
+    #obj ye objecte az class motevaze al azla
+    def Volume(self):
+        return self.obj.Volume()
+    
+    def Area(self,**kwargs):
+        return self.obj.Area()
+    
+    def Perimeter(self):
+        return (self.side1 + self.side2 )*2
+    
+    def attribute (self,**kwargs):
+        return self.obj.attribute()
+        print('you have 2 diameter that are the same size and 4 equal angle which are 90 degree')

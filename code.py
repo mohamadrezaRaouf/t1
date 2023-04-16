@@ -220,3 +220,26 @@ class circle(two_d):
     def name(self):
         super().get_name()  
         print('and its kind of circle')
+
+class diamond():
+    def __init__(self,side1,side2,side3,side4,hight1,obj,**kwargs):
+        self.side1=side1
+        self.side2=side2
+        self.side3=side3
+        self.side4=side4   
+        self.hight1=hight1
+        self.obj=obj
+    
+    def Volume (self,**kwargs):
+        print('this is a 2d shape and dose not have volume')
+    
+    def Perimeter(self,**kwargs):
+        return self.side1 + self.side2 + self.side3 + self.side4
+    
+    def Area(self,**kwargs):
+        return self.obj.Area()
+    #aggrigation az class motevazi al azla
+    #obj ye objecte az class motevaze al azla
+    def attribute (self,**kwargs):
+        return self.obj.detail()
+        print('you have 2 diameter that make 90 degree angle when they cut each other')

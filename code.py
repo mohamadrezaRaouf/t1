@@ -25,3 +25,8 @@ class shape(ABC):
    
     def __call__(self, **kwargs):
         pass
+
+    @abstractmethod   
+    def get_name(self,**kwargs):
+        self._name=input('please enter your shape name: ')
+        print(f'yor shapes name is {self._name}')

@@ -133,3 +133,41 @@ class trapezium(two_d):
         super().get_name()  
         print('and its kind of trapezium')
         
+        
+class triangle(two_d):
+    def __init__(self,side1,side2,side3,hight1,hight2,hight3,**kwargs):
+        super().__init__()
+        self.side1=side1
+        self.side2=side2
+        self.side3=side3
+        self.hight1=hight1
+        self.hight2=hight2
+        self.hight3=hight3
+
+    def Volume(self,**kwargs):
+        super().Volume()
+
+    def Perimeter(self,**kwargs):
+        return self.side1 + self.side2 + self.side3
+    
+    def Area(self,**kwargs):
+        print('yor area is on side * hight of that side/2')
+        return ((self.side1) * (self.hight1)) /2
+    
+    def kind(self):
+        if self.side1==self.side2==self.side3:
+            print('its an equilateral triangle')
+            print('all of its angles are the same')
+        elif self.side1==self.side2!=self.side3 or self.side1==self.side3!=self.side2 or self.side3==self.side2!=self.side1:
+            print('its an isosceles triangle ')
+            print('two angles are the same')
+        elif (self.side1)**2==(self.side2)**2 +(self.side3)**2 or (self.side2)**2==(self.side1)**2 +(self.side3)**2 or (self.side3)**2==(self.side2)**2 +(self.side1)**2:
+            print('its a right triangle')
+            print('it has one angle that is 90 degree')
+        else:
+            print('its an ordinary triangle')
+            
+    def name(self):
+        super().get_name()  
+        print('and its kind of triangle')
+        

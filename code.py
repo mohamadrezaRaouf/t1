@@ -343,3 +343,30 @@ class cone(three_d):
         super().get_name()
         print('and its kind of cone')    
         
+        
+
+        
+class pyramid(three_d):
+    def __init__(self,side,hight,around_side,side_hight):
+        super().__init__()
+        self.side=side
+        self.hight=hight
+        self.side_hight=side_hight
+        self.around_side=around_side
+
+    def side_area(self):
+        return 4* (self.side_hight * self.side /2)
+    
+    def total_area(self):
+        return self.side_area() + self.side **2
+    
+    def Volume(self):
+        return self.hight * (self.side **2)/3
+    
+    def Perimeter(self):
+        super().Perimeter()  
+        
+    def name(self):
+        super().get_name()
+        print('and its kind of pyramid')
+        

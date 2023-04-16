@@ -267,3 +267,30 @@ class rectangle():
     def attribute (self,**kwargs):
         return self.obj.attribute()
         print('you have 2 diameter that are the same size and 4 equal angle which are 90 degree')
+
+
+class square():
+    def __init__(self,side1,obj,**kwargs):
+        self.side1=side1
+        self.__obj=obj
+        self.__obj1=rectangle(self.side1,self.side1,self.side1,self.side1,self.side1,self.__obj)
+        self.__obj2=diamond(self.side1,self.side1,self.side1,self.side1,self.side1,self.__obj)
+        self.__d_angle=45
+        
+    def Volume(self):
+        print('its volume can be calculated by volume of diamond or rectangle')
+        return self.__obj1.Volume()
+    
+    def Area(self):
+        return self.side1 **2
+    
+    def Perimeter(self):
+        return self.side1 *4
+    
+    def attribute (self,**kwargs):
+        return self.__obj1.attribute()
+        return self.__obj2.attribute()
+    def diameter(self):
+        return self.side1 * 2**0.5
+    
+    

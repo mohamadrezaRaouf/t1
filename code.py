@@ -97,3 +97,39 @@ class parallelogram(two_d):
      
     def attribute(self,**kwargs):
         print('your diameter cut each other in half and the same opposite angles and up with down side and right with left side are parallel')
+
+class trapezium(two_d):
+    def __init__(self,up_side,down_side,right_side,left_side,hight):
+        super().__init__()
+        self.up_side=up_side
+        self.down_side=down_side
+        self.right_side=right_side
+        self.left_side=left_side
+        self.hight=hight
+        
+    def Volume(self,**kwargs):
+        super().Volume()
+    
+    def Perimeter(self,**kwargs):
+        return self.up_side + self.down_side + self.right_side + self.left_side
+    
+    def Area(self,**kwargs):
+        print('yor area is (up_side + down_side) * hight/2')
+        return ((self.up_side) + (self.down_side))* self.hight /2
+    
+    def detail(self,**kwargs):
+        print('its diameter could be different')
+    
+    def attribute(self,**kwargs):
+        print('it  have two side (up and down)which are parallel')
+        
+    def kind(self):
+        if self.right_side == self.left_side:
+            print('its an isosceles trapezoid')
+        else:
+            print('its an ordinary trapezium')
+    
+    def name(self):
+        super().get_name()  
+        print('and its kind of trapezium')
+        
